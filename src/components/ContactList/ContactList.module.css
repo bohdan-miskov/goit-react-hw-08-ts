@@ -1,0 +1,9 @@
+.container {
+  width: calc(250px * 3 + 16px * 2 + 16px * 2);
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}

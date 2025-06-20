@@ -1,0 +1,17 @@
+.authList {
+  display: flex;
+  gap: 12px;
+}
+.link {
+  display: block;
+  border: none;
+  font-size: 20px;
+  padding: 8px;
+  background-color: rgba(83, 128, 145, 0.315);
+  border-radius: 12px;
+  color: rgb(2, 2, 80);
+}
+.link.active {
+  color: rgb(160, 0, 0);
+  font-weight: 500;
+}

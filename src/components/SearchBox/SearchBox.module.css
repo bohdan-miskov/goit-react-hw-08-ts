@@ -1,0 +1,18 @@
+.container {
+  padding: 0 12px;
+  margin-bottom: 32px;
+}
+.input {
+  display: block;
+  width: 240px;
+  height: 32px;
+  border: 1px solid darkgray;
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+.label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}

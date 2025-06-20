@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  max-width: 60%;
+  align-items: center;
+}
+.text {
+  font-size: 20px;
+}
+.btn {
+  cursor: pointer;
+  display: block;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 8px;
+  background-color: rgba(63, 114, 116, 0.582);
+  border-radius: 12px;
+  color: rgb(139, 0, 0);
+}
