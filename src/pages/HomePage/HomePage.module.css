@@ -1,7 +1,37 @@
 .container {
-  padding: 120px 0;
-}
-.title {
-  font-size: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
   text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 3rem;
+  color: #006064;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #004d40;
+  margin-bottom: 40px;
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #004d40;
 }

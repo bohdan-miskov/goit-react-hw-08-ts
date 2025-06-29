@@ -7,10 +7,13 @@ export default function ContactList() {
   const viewedContacts = useSelector(selectViewedContacts);
 
   return (
-    <ul className={css.container}>
-      {viewedContacts.map((contact) => (
-        <Contact key={contact.id} {...contact} />
-      ))}
-    </ul>
+    <section className={css.container}>
+      <h2 className={css.title}>Your Contacts</h2>
+      <ul className={css.list}>
+        {viewedContacts.map((contact) => (
+          <Contact key={contact.id} {...contact} />
+        ))}
+      </ul>
+    </section>
   );
 }

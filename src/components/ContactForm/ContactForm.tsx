@@ -75,8 +75,10 @@ export default function ContactForm() {
           type="text"
           id={`${id}-name`}
           name="name"
+          placeholder="e.g. John Doe"
         />
         <ErrorMessage className={css.errorMsg} name="name" component="span" />
+
         <label className={css.label} htmlFor={`${id}-number`}>
           Number
         </label>
@@ -85,8 +87,10 @@ export default function ContactForm() {
           type="tel"
           id={`${id}-number`}
           name="number"
+          placeholder="e.g. +380991234567"
         />
         <ErrorMessage className={css.errorMsg} name="number" component="span" />
+
         <button className={css.buttonAdd} type="submit">
           {editingContact ? "Save contact" : "Add contact"}
         </button>

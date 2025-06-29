@@ -45,8 +45,8 @@ export default function RegisterForm() {
   return (
     <Formik
       onSubmit={handleSubmit}
-      validationSchema={ContactSchema}
       initialValues={initialValues}
+      validationSchema={ContactSchema}
     >
       <Form className={css.form}>
         <label className={css.label} htmlFor={`${id}-name`}>
@@ -59,6 +59,7 @@ export default function RegisterForm() {
           name="name"
         />
         <ErrorMessage className={css.errorMsg} name="name" component="span" />
+
         <label className={css.label} htmlFor={`${id}-email`}>
           Email
         </label>
@@ -69,6 +70,7 @@ export default function RegisterForm() {
           name="email"
         />
         <ErrorMessage className={css.errorMsg} name="email" component="span" />
+
         <label className={css.label} htmlFor={`${id}-password`}>
           Password
         </label>
@@ -83,6 +85,7 @@ export default function RegisterForm() {
           name="password"
           component="span"
         />
+
         <button className={css.buttonSub} type="submit">
           Sign up
         </button>

@@ -10,9 +10,16 @@ export default function UserMenu() {
   const username = useSelector(selectAuthUser).name;
 
   return (
-    <div className={css.container}>
-      <p className={css.text}>{`Welcome,${username}`}</p>
-      <button className={css.btn} onClick={handleLogOut}>
+    <div className={css.container} role="region" aria-label="User menu">
+      <p className={css.text}>
+        Welcome, <span className={css.username}>{username}</span>
+      </p>
+      <button
+        className={css.btn}
+        onClick={handleLogOut}
+        type="button"
+        aria-label="Log out"
+      >
         Log out
       </button>
     </div>

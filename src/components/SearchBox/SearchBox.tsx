@@ -23,14 +23,16 @@ export default function SearchBox() {
   return (
     <div className={css.container}>
       <label className={css.label} htmlFor={`${id}-searchName`}>
-        Find contacts by name
+        Find contacts by name or number
       </label>
       <input
         className={css.input}
+        type="text"
         onChange={(event) => debounced(event.target.value)}
         name="searchName"
         id={`${id}-searchName`}
         defaultValue={searchValue}
+        placeholder="Search John or +380..."
       />
     </div>
   );

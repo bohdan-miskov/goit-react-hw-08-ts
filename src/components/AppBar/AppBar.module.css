@@ -1,5 +1,41 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #1976d2;
+  color: #fff;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 14px rgba(25, 118, 210, 0.4);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
+.nav {
+  flex-grow: 1;
+}
+
+.authSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column-reverse;
+    gap: 28px;
+    align-items: stretch;
+    padding: 12px 16px;
+  }
+
+  .nav {
+    margin-bottom: 12px;
+  }
+
+  .authSection {
+    justify-content: center;
+  }
 }

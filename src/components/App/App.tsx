@@ -35,10 +35,10 @@ function App() {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <>
+    <div className="refreshing-container">
       <Refreshing />
       <Loader />
-    </>
+    </div>
   ) : (
     <>
       <Layout>

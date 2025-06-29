@@ -1,21 +1,59 @@
 .container {
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  max-width: 60%;
   align-items: center;
+  gap: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
 }
+
 .text {
-  font-size: 20px;
+  font-size: 1rem;
+  user-select: none;
+  margin: 0;
+  color: #e0e0e0;
 }
+
+.username {
+  font-weight: 700;
+  color: #fff;
+  margin-left: 4px;
+}
+
 .btn {
-  cursor: pointer;
-  display: block;
+  padding: 8px 16px;
+  background-color: #ef5350;
+  color: white;
   border: none;
-  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
   font-weight: 600;
-  padding: 8px;
-  background-color: rgba(63, 114, 116, 0.582);
-  border-radius: 12px;
-  color: rgb(139, 0, 0);
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #d32f2f;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+  }
 }

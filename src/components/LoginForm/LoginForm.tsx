@@ -39,8 +39,8 @@ export default function LoginForm() {
   return (
     <Formik
       onSubmit={handleSubmit}
-      validationSchema={ContactSchema}
       initialValues={initialValues}
+      validationSchema={ContactSchema}
     >
       <Form className={css.form}>
         <label className={css.label} htmlFor={`${id}-email`}>
@@ -53,6 +53,7 @@ export default function LoginForm() {
           name="email"
         />
         <ErrorMessage className={css.errorMsg} name="email" component="span" />
+
         <label className={css.label} htmlFor={`${id}-password`}>
           Password
         </label>
@@ -67,6 +68,7 @@ export default function LoginForm() {
           name="password"
           component="span"
         />
+
         <button className={css.buttonSub} type="submit">
           Log in
         </button>

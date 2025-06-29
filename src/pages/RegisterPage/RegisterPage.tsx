@@ -9,11 +9,18 @@ export default function RegisterPage() {
   const loading = useSelector(selectAuthLoading);
   const error = useSelector(selectAuthError);
   return (
-    <>
-      <h1 className={css.title}>Sign up</h1>
-      <RegisterForm />
-      {loading && <Loader />}
-      {error && <ErrorMessage>Something was wrong</ErrorMessage>}
-    </>
+    <div className={css.container}>
+      <h1 className={css.title}>Create your Contact Book account ✨</h1>
+      <p className={css.subtitle}>
+        Sign up to start saving and managing your contacts.
+      </p>
+      <div className={css.formWrapper}>
+        <RegisterForm />
+        {loading && <Loader />}
+        {error && (
+          <ErrorMessage>Something went wrong. Please try again.</ErrorMessage>
+        )}
+      </div>
+    </div>
   );
 }

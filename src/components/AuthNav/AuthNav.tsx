@@ -4,27 +4,29 @@ import clsx from "clsx";
 
 export default function AuthNav() {
   return (
-    <ul className={css.authList}>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? clsx(css.active, css.link) : css.link
-          }
-          to="/login"
-        >
-          Log in
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? clsx(css.active, css.link) : css.link
-          }
-          to="/register"
-        >
-          Sign up
-        </NavLink>
-      </li>
-    </ul>
+    <div aria-label="Authentication navigation">
+      <ul className={css.authList}>
+        <li>
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              clsx(css.link, { [css.active]: isActive })
+            }
+          >
+            Log in
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/register"
+            className={({ isActive }) =>
+              clsx(css.link, { [css.active]: isActive })
+            }
+          >
+            Sign up
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 }

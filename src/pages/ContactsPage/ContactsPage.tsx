@@ -11,6 +11,7 @@ import Loader from "../../components/Loader/Loader";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import ContactList from "../../components/ContactList/ContactList";
 import { useAppDispatch } from "../../hooks/redux";
+import css from "./ContactsPage.module.css";
 
 export default function ContactsPage() {
   const dispatch = useAppDispatch();
@@ -23,13 +24,26 @@ export default function ContactsPage() {
   }, [dispatch]);
 
   return (
-    <>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <SearchBox />
-      {loading && <Loader />}
-      {error && <ErrorMessage>Something was wrong</ErrorMessage>}
-      <ContactList />
-    </>
+    <div className={css.container}>
+      <h1 className={css.title}>📞 My Phonebook</h1>
+
+      <div className={css.section}>
+        <h2 className={css.subtitle}>Add New Contact</h2>
+        <ContactForm />
+      </div>
+
+      <div className={css.section}>
+        <h2 className={css.subtitle}>Search</h2>
+        <SearchBox />
+      </div>
+
+      <div className={css.section}>
+        {loading && <Loader />}
+        {error && (
+          <ErrorMessage>Something went wrong. Please try again.</ErrorMessage>
+        )}
+        <ContactList />
+      </div>
+    </div>
   );
 }

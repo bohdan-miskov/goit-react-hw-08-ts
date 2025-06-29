@@ -49,11 +49,12 @@ export default function ConfirmModal({
     <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
-      style={customStyles}
+      className={css.modalContent}
+      overlayClassName={css.modalOverlay}
+      closeTimeoutMS={200}
     >
       <h3 className={css.header}>Confirm</h3>
-      <p className={css.message}>{`
-Do you confirm the ${type} operation?`}</p>
+      <p className={css.message}>{`Do you confirm the ${type} operation?`}</p>
       <label className={css.checkboxLabel}>
         <input
           className={css.checkbox}
@@ -67,7 +68,7 @@ Do you confirm the ${type} operation?`}</p>
         <button className={css.buttonConfirm} onClick={handleConfirm}>
           Confirm
         </button>
-        <button className={css.buttonConfirm} onClick={closeModal}>
+        <button className={css.buttonCancel} onClick={closeModal}>
           Cancel
         </button>
       </div>

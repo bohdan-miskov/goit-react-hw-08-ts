@@ -1,5 +1,25 @@
 .title {
-  margin: 24px 10%;
-  font-size: 28px;
+  font-size: 1.25rem;
   font-weight: 600;
+  color: #1976d2;
+  margin: 0;
+  padding: 12px 24px;
+  border-radius: 10px;
+  background-color: #e3f2fd;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+  animation: fadeInSlideDown 0.6s ease forwards;
+  user-select: none;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

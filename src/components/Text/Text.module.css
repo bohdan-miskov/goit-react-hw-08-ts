@@ -1,19 +1,18 @@
 .text {
-  font-size: var(--font-medium);
-  font-weight: 700;
-
-  text-align: start;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+  user-select: text;
 }
 .end {
-  composes: text;
   text-align: end;
 }
 .center {
-  composes: text;
   text-align: center;
 }
 .justify {
-  composes: text;
   text-align: justify;
 }
 

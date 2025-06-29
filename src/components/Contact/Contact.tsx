@@ -38,23 +38,25 @@ export default function Contact({ id, name, number }: Props) {
   return (
     <>
       <li className={css.container}>
-        <div>
-          <div>
+        <div className={css.infoBlock}>
+          <div className={css.contactInfo}>
             <IoPerson className={css.icon} />
             <p className={css.info}>{name}</p>
           </div>
-          <div>
+          <div className={css.contactInfo}>
             <BsFillTelephoneFill className={css.icon} />
             <a className={css.info} href={`tel:${number}`}>
               {number}
             </a>
           </div>
         </div>
+
         <ul className={css.btnList}>
           <li>
             <button
               className={css.btnOps}
               type="button"
+              aria-label={`Edit contact ${name}`}
               onClick={() => handleSetEditContact(id)}
             >
               <CiEdit />
@@ -64,6 +66,7 @@ export default function Contact({ id, name, number }: Props) {
             <button
               className={css.btnOps}
               type="button"
+              aria-label={`Delete contact ${name}`}
               onClick={() => handleConfirm(id)}
             >
               <MdDelete />
@@ -71,6 +74,7 @@ export default function Contact({ id, name, number }: Props) {
           </li>
         </ul>
       </li>
+
       <ConfirmModal
         modalIsOpen={modalIsOpen}
         closeModal={closeModal}

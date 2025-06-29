@@ -1,47 +1,70 @@
 .form {
-  padding: 16px;
-  background-color: rgb(163, 199, 187);
-  border-radius: 20px;
-  border: 1px solid black;
-  text-align: start;
-  max-width: 300px;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
+
 .label {
-  display: block;
-  margin: 0 auto;
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-.input {
-  padding: 0 12px;
-  width: 220px;
-  height: 30px;
-  border: 1px solid black;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 12px;
-}
-.buttonAdd {
-  padding: 8px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: 500;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  background-color: rgb(63, 114, 116);
-  color: #fafafa;
-}
-.errorMsg {
-  color: darkred;
-  font-size: 16px;
   font-weight: 600;
-  text-decoration: underline;
-  display: block;
-  margin-bottom: 12px;
+  color: #37474f;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.input {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #43a047;
+  box-shadow: 0 0 0 3px rgba(67, 160, 71, 0.2);
+}
+
+.input::placeholder {
+  color: #9e9e9e;
+  font-size: 0.9rem;
+}
+
+.errorMsg {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: -12px;
+  margin-bottom: -4px;
+  text-align: left;
+}
+
+.buttonAdd {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #43a047;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.buttonAdd:hover {
+  background-color: #2e7d32;
+}
+
+@media (max-width: 480px) {
+  .form {
+    gap: 14px;
+  }
+
+  .input {
+    font-size: 0.95rem;
+  }
+
+  .buttonAdd {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
 }

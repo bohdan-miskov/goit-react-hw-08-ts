@@ -10,10 +10,17 @@ export default function LoginPage() {
   const error = useSelector(selectAuthError);
   return (
     <>
-      <h1 className={css.title}>Log in</h1>
-      <LoginForm />
-      {loading && <Loader />}
-      {error && <ErrorMessage>Something was wrong</ErrorMessage>}
+      <div className={css.container}>
+        <h1 className={css.title}>Log in to your Contact Book 📘</h1>
+        <p className={css.subtitle}>Access your saved contacts in seconds.</p>
+        <div className={css.formWrapper}>
+          <LoginForm />
+          {loading && <Loader />}
+          {error && (
+            <ErrorMessage>Something went wrong. Please try again.</ErrorMessage>
+          )}
+        </div>
+      </div>
     </>
   );
 }

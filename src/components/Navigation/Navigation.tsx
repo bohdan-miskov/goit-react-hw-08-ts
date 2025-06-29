@@ -8,29 +8,31 @@ export default function Navigation() {
   const isLoggedIn = useSelector(selectAuthIsLoggedIn);
 
   return (
-    <ul className={css.navList}>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? clsx(css.active, css.link) : css.link
-          }
-          to="/"
-        >
-          Home
-        </NavLink>
-      </li>
-      {isLoggedIn && (
+    <nav>
+      <ul className={css.navList}>
         <li>
           <NavLink
+            to="/"
             className={({ isActive }) =>
-              isActive ? clsx(css.active, css.link) : css.link
+              clsx(css.link, { [css.active]: isActive })
             }
-            to="/contacts"
           >
-            Contacts
+            Home
           </NavLink>
         </li>
-      )}
-    </ul>
+        {isLoggedIn && (
+          <li>
+            <NavLink
+              to="/contacts"
+              className={({ isActive }) =>
+                clsx(css.link, { [css.active]: isActive })
+              }
+            >
+              Contacts
+            </NavLink>
+          </li>
+        )}
+      </ul>
+    </nav>
   );
 }
